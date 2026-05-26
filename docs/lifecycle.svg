@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, monospace">
+  <!-- background -->
+  <rect width="1200" height="520" fill="#0a0a0a"/>
+
+  <!-- grid texture: faint dots, very low opacity -->
+  <defs>
+    <pattern id="dots" x="0" y="0" width="48" height="48" patternUnits="userSpaceOnUse">
+      <circle cx="0" cy="0" r="0.5" fill="#1f1f1f"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3a3a3a"/>
+    </marker>
+    <marker id="arrowLime" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d0ff00"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="520" fill="url(#dots)"/>
+
+  <!-- top hairline accent on the left, like the dApp section markers -->
+  <line x1="60" y1="60" x2="116" y2="60" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- eyebrow -->
+  <g transform="translate(60, 88)" font-size="10" letter-spacing="2.4" fill="#6a6a6a">
+    <circle cx="0" cy="-3" r="3.5" fill="#d0ff00"/>
+    <text x="14" y="0">LIVE</text>
+    <text x="56" y="0" fill="#3a3a3a">·</text>
+    <text x="70" y="0">DAIO  EPOCH LIFECYCLE</text>
+    <text x="295" y="0" fill="#3a3a3a">·</text>
+    <text x="309" y="0">5 PHASES  ·  1H EPOCH (60S+60S IN DEMO)</text>
+  </g>
+
+  <!-- title -->
+  <g transform="translate(60, 152)" font-weight="700" letter-spacing="-3">
+    <text font-size="56" fill="#f0f0f0">A DAO with no humans<tspan fill="#d0ff00">.</tspan></text>
+  </g>
+
+  <!-- strapline -->
+  <g transform="translate(60, 192)" font-size="14" fill="#6a6a6a" letter-spacing="0.2">
+    <text>Three AI agents allocate LP capital across tokenized real-world assets each epoch, on-chain.</text>
+  </g>
+
+  <!-- ============ THE 5-PHASE RAIL ============ -->
+  <!-- rail position -->
+  <g transform="translate(80, 290)">
+    <!-- full rail -->
+    <line x1="20" y1="0" x2="1020" y2="0" stroke="#2a2a2a" stroke-width="1"/>
+    <!-- lime-filled portion through the active node (Consensus, node 4 of 5) -->
+    <line x1="20" y1="0" x2="780" y2="0" stroke="#d0ff00" stroke-width="1" filter="url(#glow)" opacity="0.85"/>
+
+    <!-- node positions: x = 20, 270, 520, 770, 1020 -->
+    <!-- done nodes 01-03 -->
+    <g>
+      <circle cx="20"  cy="0" r="9" fill="#f0f0f0" stroke="#f0f0f0"/>
+      <circle cx="270" cy="0" r="9" fill="#f0f0f0" stroke="#f0f0f0"/>
+      <circle cx="520" cy="0" r="9" fill="#f0f0f0" stroke="#f0f0f0"/>
+    </g>
+
+    <!-- active node 04 (Consensus) -->
+    <g>
+      <circle cx="770" cy="0" r="11" fill="#d0ff00" stroke="#d0ff00" filter="url(#glow)"/>
+      <circle cx="770" cy="0" r="18" fill="none" stroke="#d0ff00" stroke-width="1" opacity="0.35"/>
+    </g>
+
+    <!-- upcoming node 05 (Settle) -->
+    <circle cx="1020" cy="0" r="9" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="1.5"/>
+
+    <!-- ============ phase labels and bodies ============ -->
+    <g font-size="11" letter-spacing="2.4" font-weight="500">
+      <!-- 01 INTENT -->
+      <g transform="translate(20, 28)" text-anchor="middle">
+        <text fill="#6a6a6a" font-size="10">01</text>
+        <text y="20" fill="#f0f0f0">INTENT</text>
+      </g>
+      <!-- 02 COMMIT -->
+      <g transform="translate(270, 28)" text-anchor="middle">
+        <text fill="#6a6a6a" font-size="10">02</text>
+        <text y="20" fill="#f0f0f0">COMMIT</text>
+      </g>
+      <!-- 03 REVEAL -->
+      <g transform="translate(520, 28)" text-anchor="middle">
+        <text fill="#6a6a6a" font-size="10">03</text>
+        <text y="20" fill="#f0f0f0">REVEAL</text>
+      </g>
+      <!-- 04 CONSENSUS (active) -->
+      <g transform="translate(770, 28)" text-anchor="middle">
+        <text fill="#d0ff00" font-size="10">04</text>
+        <text y="20" fill="#f0f0f0">CONSENSUS</text>
+        <text y="38" fill="#d0ff00" font-size="8" letter-spacing="3.5">CURRENT</text>
+      </g>
+      <!-- 05 SETTLE -->
+      <g transform="translate(1020, 28)" text-anchor="middle">
+        <text fill="#3a3a3a" font-size="10">05</text>
+        <text y="20" fill="#6a6a6a">SETTLE</text>
+      </g>
+    </g>
+
+    <!-- body descriptions per phase -->
+    <g font-size="10" fill="#6a6a6a" letter-spacing="0.1">
+      <g transform="translate(20, 100)" text-anchor="middle">
+        <text>LPs deposit USDC</text>
+        <text y="14">into the vault</text>
+      </g>
+      <g transform="translate(270, 100)" text-anchor="middle">
+        <text>Agents submit</text>
+        <text y="14">sealed hashes</text>
+      </g>
+      <g transform="translate(520, 100)" text-anchor="middle">
+        <text>Agents reveal</text>
+        <text y="14">proposal + sig</text>
+      </g>
+      <g transform="translate(770, 100)" text-anchor="middle" fill="#f0f0f0">
+        <text>Stake-weighted</text>
+        <text y="14">per-token median</text>
+      </g>
+      <g transform="translate(1020, 100)" text-anchor="middle">
+        <text>Swap basket</text>
+        <text y="14">fees, slashing</text>
+      </g>
+    </g>
+
+    <!-- contract chips below each phase -->
+    <g font-size="9" letter-spacing="0.4">
+      <!-- INTENT: DaioVault -->
+      <g transform="translate(20, 144)">
+        <rect x="-46" y="-9" width="92" height="18" fill="#111" stroke="#2a2a2a"/>
+        <text text-anchor="middle" y="4" fill="#f0f0f0">DaioVault</text>
+      </g>
+      <!-- COMMIT: ProposalRound -->
+      <g transform="translate(270, 144)">
+        <rect x="-58" y="-9" width="116" height="18" fill="#111" stroke="#2a2a2a"/>
+        <text text-anchor="middle" y="4" fill="#f0f0f0">ProposalRound</text>
+      </g>
+      <!-- REVEAL: ProposalRound -->
+      <g transform="translate(520, 144)">
+        <rect x="-58" y="-9" width="116" height="18" fill="#111" stroke="#2a2a2a"/>
+        <text text-anchor="middle" y="4" fill="#f0f0f0">ProposalRound</text>
+      </g>
+      <!-- CONSENSUS: Consensus -->
+      <g transform="translate(770, 144)">
+        <rect x="-46" y="-9" width="92" height="18" fill="#111" stroke="#d0ff00"/>
+        <text text-anchor="middle" y="4" fill="#d0ff00">Consensus</text>
+      </g>
+      <!-- SETTLE: Executor + PerformanceFee -->
+      <g transform="translate(1020, 144)">
+        <rect x="-78" y="-9" width="156" height="18" fill="#111" stroke="#2a2a2a"/>
+        <text text-anchor="middle" y="4" fill="#6a6a6a">Executor + PerformanceFee</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- cyclicity hint: small "↻" symbol next to the SETTLE node -->
+  <text x="1145" y="320" font-size="14" fill="#3a3a3a" letter-spacing="0">↻</text>
+
+  <!-- ============ footer strip ============ -->
+  <line x1="60" y1="478" x2="1140" y2="478" stroke="#1f1f1f"/>
+  <g font-size="10" fill="#6a6a6a" letter-spacing="2.4">
+    <text x="60" y="498">DAIO  ·  ARBITRUM OPEN HOUSE LONDON 2026</text>
+    <text x="1140" y="498" text-anchor="end">ARBITRUM SEPOLIA  ·  CHAIN 421614</text>
+  </g>
+</svg>

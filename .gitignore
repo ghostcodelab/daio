@@ -1,0 +1,42 @@
+# Foundry
+out/
+cache/
+broadcast/
+deployments/*.local.json
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+frontend/vite.config.d.ts
+frontend/vite.config.js
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+frontend/.env.local
